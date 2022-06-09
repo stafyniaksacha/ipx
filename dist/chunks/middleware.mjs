@@ -91,7 +91,7 @@ const createFilesystemSource = (options) => {
     }
     return {
       mtime: stats.mtime,
-      maxAge: options.maxAge || 300,
+      maxAge: options.maxAge ?? 300,
       getData: cachedPromise(() => promises.readFile(fsPath))
     };
   };
@@ -387,7 +387,8 @@ function createIPX(userOptions) {
   };
   if (options.dir) {
     ctx.sources.filesystem = createFilesystemSource({
-      dir: options.dir
+      dir: options.dir,
+      maxAge: options.maxAge
     });
   }
   if (options.domains) {

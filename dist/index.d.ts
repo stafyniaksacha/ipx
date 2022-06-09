@@ -27,6 +27,7 @@ declare type IPX = (id: string, modifiers?: Record<string, string>, reqOptions?:
 };
 interface IPXOptions {
     dir?: false | string;
+    maxAge?: number;
     domains?: false | string[];
     alias: Record<string, string>;
     sharp?: {
