@@ -1,4 +1,4 @@
-import defu from 'defu';
+import { defu } from 'defu';
 import { imageMeta } from 'image-meta';
 import { parseURL, withLeadingSlash, hasProtocol, joinURL, decode } from 'ufo';
 import { promises } from 'fs';

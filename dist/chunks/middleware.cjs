@@ -15,7 +15,6 @@ const xss = require('xss');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e["default"] : e; }
 
-const defu__default = /*#__PURE__*/_interopDefaultLegacy(defu);
 const isValidPath__default = /*#__PURE__*/_interopDefaultLegacy(isValidPath);
 const http__default = /*#__PURE__*/_interopDefaultLegacy(http);
 const https__default = /*#__PURE__*/_interopDefaultLegacy(https);
@@ -392,7 +391,7 @@ function createIPX(userOptions) {
     alias: getEnv("IPX_ALIAS", {}),
     sharp: {}
   };
-  const options = defu__default(userOptions, defaults);
+  const options = defu.defu(userOptions, defaults);
   options.alias = Object.fromEntries(Object.entries(options.alias).map((e) => [ufo.withLeadingSlash(e[0]), e[1]]));
   const ctx = {
     sources: {}
